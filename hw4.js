@@ -1,4 +1,4 @@
-const inventors = [
+var  inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
@@ -16,9 +16,10 @@ const inventors = [
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's, use console.table to display the results
-const oldInventors = inventors.filter( 1500 < inventors.year <1600);
-
-console.table(oldInventors);
+    var oldInventors = inventors.filter(function (e) {
+        return  e.year < 1600 ;
+    });
+    console.table (oldInventors);
 
    
  
@@ -26,4 +27,6 @@ console.table(oldInventors);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventor first and last names
+    const map1 = inventors.map(property => property.first + '   ' + property.last);
+    console.log(map1);
     //console.table the results
